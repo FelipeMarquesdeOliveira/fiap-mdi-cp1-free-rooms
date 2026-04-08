@@ -12,7 +12,6 @@ export default function TabsLayout() {
           height: 60,
           paddingBottom: 10,
         },
-        // Removemos o header padrão (faixa vermelha) para usar o nosso customizado dentro das telas
         headerShown: false, 
       }}
     >
@@ -34,18 +33,19 @@ export default function TabsLayout() {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="heart" size={size} color={color} />
           ),
-          headerShown: true, // Mantemos o header apenas nas outras telas se desejar
+          headerShown: true,
           headerStyle: { backgroundColor: Colors.primary },
           headerTintColor: '#fff',
         }}
       />
+      {/* Alteramos o Histórico para Reservas */}
       <Tabs.Screen
         name="history"
         options={{
-          title: 'Histórico',
-          tabBarLabel: 'Histórico',
+          title: 'Aba Reserva',
+          tabBarLabel: 'Reservas',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="time" size={size} color={color} />
+            <Ionicons name="calendar" size={size} color={color} />
           ),
           headerShown: true,
           headerStyle: { backgroundColor: Colors.primary },
